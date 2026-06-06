@@ -8,6 +8,7 @@ class MusicianSerializer(serializers.ModelSerializer):
     age = serializers.IntegerField(
         validators=[MinValueValidator(14)]
     )
+
     class Meta:
         model = Musician
         fields = ("first_name",
